@@ -1,3 +1,6 @@
+/* TODO_left: flex-wrap the hero-text and image for smaller devices
+, can't figure out a way to do that right now */
+
 body {
     font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     display: flex;
@@ -34,12 +37,15 @@ body {
     /* this should be optimized.. works on my screen, but not necessarily on other screens */
     padding: 150px 0px;
     gap: 24px;
+    /* flex-wrap: wrap;  */
+    /* just wanted this for compatible with multiple devices, can we preserve the inteded design with min-width? */
 }
 
 .hero_main .text {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    /* flex-basis: 35%; */
 }
 
 .hero_main .main_text {
@@ -80,6 +86,7 @@ button {
     display: flex;
     gap: 24px;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .players .player {
@@ -89,6 +96,7 @@ button {
     align-items: center;
     text-align: center;
     width: 200px;
+    flex-wrap: wrap;
 }
 
 .information img {
@@ -115,7 +123,7 @@ button {
     font-weight: bold;
 }
 
-.footer {
+.call_to_action {
     background-color: white;
     padding: 100px 180px;
     display: flex;
@@ -125,7 +133,7 @@ button {
     line-height: 1.3em;
 }
 
-.footer .box {
+.call_to_action .box {
     flex: 1;
     border-radius: 5px;
     background-color: #3882f6;
@@ -144,11 +152,21 @@ button {
     color: white;
 }
 
+.footer {
+    background-color: #1f2937;
+    color: #f9faf8;
+    flex: 1;
+    padding: 16px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 a {
     text-decoration: none;
     color: #e5e7eb;
 }
 
-img.hero_img {
+.hero_img {
     width: 60%;
 }
